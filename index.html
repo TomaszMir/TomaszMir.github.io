@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TASK</title>
+<script
+ src="https://code.jquery.com/jquery-3.3.1.js"
+integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+crossorigin="anonymous">
+    </script>
+  <script 
+src=https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js>
+    </script>
+    <script 
+    type="text/javascript" src="jquery.tablesorter.js">
+    </script>
+    
+  
+    
+
+<body>
+
+ <div id="users">
+  <input type="text"  class="search" placeholder="Search" />
+  <input type="date" class="search" />
+  
+   <table   id="mytable">
+   <thead>
+    <tr>
+      <th>id</th>
+      <th>firstName</th>
+      <th>lastName</th>
+      <th>dateOfBirth</th>
+      <th>company</th>
+      <th>note</th>
+    </tr>
+     </thead>
+     <tbody class="list">
+    <tr>
+      <td class="id">1</td>
+      <td class="firstName">Jan</td>
+      <td class="lastName">Kowalski</td>
+      <td class="dateOfBirth">1.07.1990 11:35</td>
+      <td class="company">XSolve</td>
+      <td class="note">90</td>
+    </tr>
+    <tr>
+      <td class="id">4</td>
+      <td class="firstName">Justyna</td>
+      <td class="lastName">Kowalska</td>
+      <td class="dateOfBirth">4.02.1976 14:37</td>
+      <td class="company">XSolve</td>
+      <td class="note">91</td>
+    </tr>
+    <tr>
+      <td class="id">2</td>
+      <td class="firstName">Krzysztof</td>
+      <td class="lastName">Krawczyk</td>
+      <td class="dateOfBirth">28.10.1950 2:15</td>
+      <td class="company">Chilid</td>
+      <td class="note">27</td>
+    </tr>
+    <tr>
+      <td class="id">3</td>
+      <td class="firstName">Bogusław</td>
+      <td class="lastName">Linda</td>
+      <td class="dateOfBirth">03.01.1963 23:10</td>
+      <td class="company">XSolve</td>
+      <td class="note">50</td>
+    </tr>
+    <tr>
+      <td class="id">5</td>
+      <td class="firstName">Krzysztof</td>
+      <td class="lastName">Kononowicz</td>
+      <td class="dateOfBirth">10.10.1910 18:00</td>
+      <td class="company">Chilid</td>
+      <td class="note">77</td>
+    </tr>
+     <tr>
+      <td class="id">6</td>
+      <td class="firstName">Maryla</td>
+      <td class="lastName">Rodowicz</td>
+      <td class="dateOfBirth">29.02.1936 11:35</td>
+      <td class="company">XSolve</td>
+      <td class="note">8</td>
+      </tr>
+      </tbody>
+  </table>
+  <script>
+      $(document).ready(function()
+    {
+        $("#mytable").tablesorter();
+    }
+);
+    var options = { valueNames:
+        ["firstName","lastName","company","note ","id","dateOfBirth"]};
+    var userlist = new  List('users',options);
+  
+
+    </script>
+  </body>
+</html>
